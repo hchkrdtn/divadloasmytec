@@ -14,6 +14,7 @@ h1, .das-nav, .das-footer {
 
 a {
     text-decoration: none;
+    color: #6a6a6a;
 }
 
 a:hover {
