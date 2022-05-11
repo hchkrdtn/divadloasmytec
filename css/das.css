@@ -1,0 +1,88 @@
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: lightgrey;
+    width: 980px;
+}
+
+.das-container {
+    width: 970px;
+}
+
+h1, .das-nav, .das-footer {
+    font-family: Georgia, Palatino, serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3a3a3a;
+}
+
+.das-text-intro {
+    line-height: 120%;
+    padding: 0;
+    margin: 20px 10px 20px 10px;
+}
+
+.das-text-xlarge {
+    line-height: 120%;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.das-text {
+    line-height: 130%;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.das-text-contact {
+    line-height: 120%;
+    padding: 0;
+    margin: 20px 20px 30px 10px;
+}
+
+.das-header{
+    font-family: Georgia, Palatino, serif;
+    width: 935px;
+    height: 60px;
+    margin: 5px 0;
+}
+
+.das-text-fotogalerie {
+    padding: 0;
+    margin: 20px 10px 10px 10px;
+}
+
+.das-logo {
+    height: 60px;
+}
+
+.das-image {
+    width: 235px;
+    padding: 0;
+    margin: 0;
+}
+
+.das-image-p {
+    padding: 0;
+    margin: 25px 0 0 0;
+}
+
+.das-image-bio {
+    height: 220px;
+    padding: 0;
+    margin: 0;
+}
+
+.das-image-p-bio {
+    padding: 0;
+    margin: 25px 0 0 0;
+}
+
+.das-image-fotogalerie {
+    padding: 0;
+    margin: 0;
+}
