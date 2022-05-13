@@ -10,12 +10,10 @@
 #
 # 3. Change the values for the APP_LOCATION, API_LOCATION and APP_ARTIFACT_LOCATION, AZURE_STATIC_WEB_APPS_API_TOKEN environment variables (below).
 #    For instructions on setting up the appropriate configuration values go to https://docs.microsoft.com/azure/static-web-apps/front-end-frameworks
+
 name: Deploy web app to Azure Static Web Apps
 
 on:
-  push:
-    branches:
-      - $default-branch
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
@@ -30,7 +28,7 @@ env:
 
 jobs:
   build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
