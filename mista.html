@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content=" " />
+    <meta name="description" content=" " />
+    <meta name="robots" content="index, follow" />
+
+    <title>Mista na mape</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/das.css">
+
+    <link rel="stylesheet" href="css/leaflet.css" crossorigin=""/>
+    <script src="js/leaflet.js" crossorigin=""></script>
+
+    <style>
+        .leaflet-container {
+            height: 700px;
+            width: 950px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+
+<body class="w3-content">
+
+<div class="w3-container w3-card w3-center w3-white w3-text-dark-grey das-container">
+    <div class="w3-display-container das-header">
+        <div class="w3-display-right">
+            <a href="mista.html"><img class="das-logo" src="images/logo_3_89x76.png" alt="logo" title="logo" /></a>
+        </div>
+        <div class="w3-display-middle"><h1>MAPA MÍST</h1></div>
+    </div>
+
+    <div class="w3-display-container w3-justify w3-xlarge">
+        <div id="map" style="width: 950px; height: 700px;"></div>
+        <script>
+            var map = L.map("map").setView([50.08, 14.42], 10);
+
+            var tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            var marker = L.marker([50.08, 14.42]).addTo(map)
+                .bindPopup("<b>Divadlo A Smytec!</b>").openPopup();
+
+            function onMapClick(e) {
+                popup
+                    .setLatLng(e.latlng)
+                    .setContent("You clicked the map at " + e.latlng.toString())
+                    .openOn(map);
+            }
+
+            map.on("click", onMapClick);
+        </script>
+    </div>
+
+    <div class=" w3-margin w3-xlarge das-nav">
+        <div class="w3-col l3 m3 s3 w3-margin-bottom"><a href="index.html">Úvodní stránka</a></div>
+        <div class="w3-col l3 m3 s3 w3-margin-bottom"><a href="soubor.html">Více o nás</a></div>
+        <div class="w3-col l3 m3 s3 w3-margin-bottom"><a href="predstaveni.html">Představení</a></div>
+        <div class="w3-col l3 m3 s3 w3-margin-bottom"><a href="fotogalerie.html">Fotogalerie</a></div>
+    </div>
+
+    <div class="w3-right w3-small w3-text-grey das-footer">
+        Copyright &copy;DivadloASmytec Poslední změna 6.6.2022
+    </div>
+</div>
+
+</body>
+</html>
